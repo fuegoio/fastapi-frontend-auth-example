@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  database:
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=example
+      - POSTGRES_PASSWORD=example
+    volumes:
+      - ./volumes/database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
